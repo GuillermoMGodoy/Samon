@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sabor a Monte - Distribuidora de Alimentos</title>
+
+    <!-- Enlace a la hoja de estilos CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Enlace a Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Lato:wght@400;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- BARRA DE NAVEGACIÓN -->
+    <nav class="navbar">
+        <a href="#hero" class="nav-title">
+            🍄‍🟫Sabor a Monte <span class="nav-subtitle">(Distribuidora de Alimentos)</span>
+        </a>
+        <div class="nav-links">
+            <a href="#nosotros">Nosotros</a>
+            <a href="#productos">Productos</a>
+            <a href="#contacto">Contacto</a>
+        </div>
+        <button class="menu-toggle">☰</button>
+    </nav>
+
+    <!-- SECCIÓN HERO (PORTADA) -->
+    <header id="hero" class="hero">
+        <div class="hero-content">
+            <!-- El logo ahora solo está aquí, como portada -->
+            <img src="./images/logo.png" alt="Logo Sabor a Monte" class="hero-logo">
+            <h1>Sabor a Monte</h1>
+            <p>🍓Distribuidora de Alimentos🍓</p>
+        </div>
+    </header>
+
+    <main>
+        <!-- SECCIÓN NOSOTROS -->
+        <section id="nosotros" class="section">
+            <div class="container fade-in">
+                <div class="nosotros-content">
+                    <h2 class="section-title" style="text-align: left; margin-bottom: 20px;">Nuestra Historia</h2>
+                    <p>En <strong>Sabor a Monte</strong>, creemos en el poder de los alimentos puros y naturales.
+                        Nacimos del deseo de conectar a las personas con el origen de lo que comen, llevando productos
+                        de la más alta calidad desde pequeños productores locales hasta la puerta de tu negocio.</p>
+                    <br>
+                    <p>Nuestra misión es simple: distribuir alimentos que no solo nutren el cuerpo, sino que también
+                        cuentan una historia de tradición, cuidado y respeto por la tierra. Cada producto que
+                        seleccionamos es un reflejo de nuestro compromiso con la autenticidad y el sabor genuino.</p>
+                </div>
+                <div class="nosotros-image">
+                    <img src="./images/Frutas Congeladas.jpg" alt="Campo con vegetales frescos">
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN PRODUCTOS -->
+        <section id="productos" class="section">
+            <div class="container fade-in">
+                <h2 class="section-title">Nuestros Productos</h2>
+                <div id="product-list-container">
+                    <!-- Las categorías y productos se generarán aquí con JavaScript -->
+                    <div class="loading-spinner"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN CONTACTO -->
+        <section id="contacto" class="section">
+            <div class="container fade-in" style="text-align: center;">
+                <h2 class="section-title">Contáctanos</h2>
+                <p>¿Listo para hacer tu pedido o tienes alguna pregunta? ¡Estamos aquí para ayudarte!</p>
+                <p>Agrega productos a tu lista y envíanosla por WhatsApp para recibir una cotización.</p>
+                <br>
+                <p><strong>Teléfono y WhatsApp:</strong> +54 9 11 1234 5678</p>
+                <p><strong>Email:</strong> pedidos@saboramonte.com</p>
+                <p><strong>Horario de atención:</strong> Lunes a Viernes de 9:00 a 18:00 hs.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <p>© 2024 Sabor a Monte. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- BOTÓN FLOTANTE DEL CARRITO -->
+    <div class="cart-fab" id="cart-fab">
+        <span class="cart-icon">🛒</span>
+        <span class="cart-counter" id="cart-counter">0</span>
+    </div>
+
+    <!-- MODAL DEL CARRITO (Sin cambios) -->
+    <div class="cart-modal-overlay" id="cart-modal-overlay">
+        <div class="cart-modal">
+            <div class="cart-modal-header">
+                <h3>Mi Lista de Pedido</h3>
+                <button class="cart-modal-close" id="cart-modal-close">×</button>
+            </div>
+            <div class="cart-modal-body">
+                <ul id="cart-items-list"></ul>
+                <p id="empty-cart-message">Tu lista está vacía.</p>
+                <a href="#" id="send-whatsapp-order" class="btn btn-whatsapp">Realizar Pedido por WhatsApp</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Enlace al archivo JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
